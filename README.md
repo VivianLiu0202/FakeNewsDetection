@@ -22,11 +22,11 @@ Python IDE: PyCharm CE
 
 ## 四、关键步骤及代码细节
 
-###（1）Prepraing Training Data
+### （1）Prepraing Training Data
 
 首先读入数据，并编写cleaning函数清洗数据并使用tokenizer提取关键词生成字典。此后将序列转换为经过填充之后的一个长度相同的新序列，即数据集处理完成。
 
-###（2）Model Training
+### （2）Model Training
 
   建立**序贯模型(Sequential)**。在Keras中，序贯模型是单输入单输出，层与层之间只有相邻关系，没有跨层的连接。这种模型的编译速度较快，也可以清晰地表明各层在数据输入到输出的转换过程中起到的职责。
 
@@ -46,7 +46,7 @@ Python IDE: PyCharm CE
 
   在训练完成之后使用matplotlib进行绘图，将5轮训练和测试的acuuracy和loss通过绘制图像表示。
 
-###（3）Testing Model on Testing Dataset
+### （3）Testing Model on Testing Dataset
 
   最后将测试集数据进行清洗、序列预处理后进行预测，并输出分类报告，AUC等实验需要数据的值。
 
