@@ -2,25 +2,25 @@
 
 Python大作业虚假新闻检测
 
-# 一、问题描述
+## 一、问题描述
 
 数据集是中文微信消息，包括微信消息的Official Account Name，Title，News Url，Image Url，Report Content，label。Title是微信消息的标题，label是消息的真假标签（0是real消息，1是fake消息）。训练数据保存在train.news.csv，测试数据保存在test.news.csv。
 
 实验过程中先统计分析训练数据【train.news.csv】。根据train.news.csv中的Title文字训练模型，然后在test.news.csv上测试，给出Precision, Recall, F1-Score, AUC的结果。
 
-# 二、开发环境
+## 二、开发环境
 
 Python Interpreter：Python 3.9
 
 Python IDE: PyCharm CE
 
-# 三、数据集说明
+## 三、数据集说明
 
 数据集包含微信消息的Official Account Name，Title，News Url，Image Url，Report Content，label（0为真1为假）。训练时将Official Account Name，Title，Report Content三列数据合成一列。而News Url，Image Url则舍去不用。
 
 我们观察训练集的时候可以发现，训练集的真消息全部分布在前面，假消息全部分布在后面，因此我们在进行模型训练的时候需要把数据shuffle一下，避免模型根据数据的先后位置进行学习判断。
 
-# 四、关键步骤及代码细节
+## 四、关键步骤及代码细节
 
 ###（1）Prepraing Training Data
 
